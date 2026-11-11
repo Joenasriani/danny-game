@@ -1,0 +1,51 @@
+{
+  "project": "Danny",
+  "subtitle": "The man who Sword the world!",
+  "stage": "independent gameplay baseline; music transfer pending via one-time workflow",
+  "source_repository": "https://github.com/Joenasriani/stickman",
+  "source_commit": "b7a7e2737a9087154f50bead2f159e425fcada34",
+  "source_game_sha256": "320413936fca080b1b2fbb3285e0b094e32f736ff0dd90b72c65543a3f85ad4f",
+  "origin_relation": "Independent copy, not a GitHub fork; no cross-repo deployment or automation",
+  "level_count": 16,
+  "level_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "gameplay": "identical to source baseline except browser and intro title/subtitle branding",
+  "html_sha256": "b734f1d75192b7a673a2b224b0a8eff056ced0d67d73be0b1945ec6429e1fd7a",
+  "html_git_blob_sha1": "8dda48c668cd9dfba5ce7c09cdd4fbfe00979199",
+  "html_bytes": 143680,
+  "asset_sha256": {
+    "fonts/bubble.ttf": "a6c44dd1a521540346c69a97d84c88d43a475297f3462cc134349140b11f6c74",
+    "music/Prince of Persia low res.mp3": "0fd8de7c6be13bf0a3f634ba551ac1a598b3e5beab3a705bac1611f41cc2968f",
+    "sfx/whoosh and hit.wav": "cd42b09ef70c751dc7c4e16ca19b927032d5158c5d0d0324e6bba5cf9b13eb44",
+    "sfx/whoosh in air (1).mp3": "40a68c056da2f09357fcdfd449b0eaa67600b94c05319f23819f07552cbb5162",
+    "sfx/whoosh in air (2).mp3": "d2a6e6eb3191c0498637b24897b420717bcae71c4b73f1ab5237db9c47a802f6",
+    "sfx/whoosh last hit.mp3": "f89ad1657209daec85a2b17e009c0c8d992f8549d5ed477622b44f6a099fa577"
+  },
+  "external_dependency": "Three.js r128 loaded from cdnjs, requires network",
+  "checks": {
+    "html_and_five_assets": "matched GitHub blob hashes",
+    "music": "PENDING automated transfer",
+    "js_syntax": "passed locally on prepared exact source",
+    "browser_gameplay": "NOT VERIFIED",
+    "mobile": "NOT VERIFIED",
+    "deployment": "NOT DEPLOYED"
+  },
+  "protected_source_repo": "https://github.com/Joenasriani/stickman",
+  "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman."
+}

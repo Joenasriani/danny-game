@@ -1,0 +1,28 @@
+name: Restore pinned Danny music (one time)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/bootstrap-danny-music.yml'
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Fetch and verify unchanged source music
+        run: |
+          mkdir -p music
+          curl --fail --location --retry 3 --output "music/Prince of Persia low res.mp3" "https://raw.githubusercontent.com/Joenasriani/stickman/b7a7e2737a9087154f50bead2f159e425fcada34/music/Prince%20of%20Persia%20low%20res.mp3"
+          echo "0fd8de7c6be13bf0a3f634ba551ac1a598b3e5beab3a705bac1611f41cc2968f  music/Prince of Persia low res.mp3" | sha256sum --check
+      - name: Commit verified music and retire one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "music/Prince of Persia low res.mp3"
+          git rm -- ".github/workflows/bootstrap-danny-music.yml"
+          git commit -m "Complete Danny runtime assets; retire one-time import workflow"
+          git push origin HEAD:main
