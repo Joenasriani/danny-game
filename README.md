@@ -26,5 +26,8 @@ Danny is **not a GitHub fork**. Its history begins here. Original Stickman repos
 ## Next step
 Prototype an optional **Living Sketch** visual mode: expressive pencil-drawn characters, graphite hatching, controlled line boil, and hand-drawn architecture. Use an isolated branch and preserve all mobile-first/desktop-responsive gameplay behavior.
 
+## Asset transfer
+All six runtime assets were copied and their Git blob checksums matched the source repository; the one-time transfer workflow was retired automatically.
+
 ## Verification
 Run `python3 tools/validate_danny.py` (Python 3 and Node.js). Automated checks validate hashes and syntax, **not** real browser playthrough. Full mobile/desktop QA remains open.

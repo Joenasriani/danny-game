@@ -1,7 +1,7 @@
 {
   "project": "Danny",
   "subtitle": "The man who Sword the world!",
-  "stage": "independent gameplay baseline; music transfer pending via one-time workflow",
+  "stage": "independent 16-level baseline copied with all original runtime assets; character redesign not started",
   "source_repository": "https://github.com/Joenasriani/stickman",
   "source_commit": "b7a7e2737a9087154f50bead2f159e425fcada34",
   "source_game_sha256": "320413936fca080b1b2fbb3285e0b094e32f736ff0dd90b72c65543a3f85ad4f",
@@ -39,13 +39,15 @@
   },
   "external_dependency": "Three.js r128 loaded from cdnjs, requires network",
   "checks": {
-    "html_and_five_assets": "matched GitHub blob hashes",
-    "music": "PENDING automated transfer",
-    "js_syntax": "passed locally on prepared exact source",
+    "html_and_five_assets": "All six original asset Git blob hashes matched at repository import; Danny-branded index SHA checked",
+    "music": "Transferred via pinned-source one-time workflow; Git blob matches original",
+    "js_syntax": "Passed locally on exact Danny-branded source; GitHub CI recheck pending",
     "browser_gameplay": "NOT VERIFIED",
     "mobile": "NOT VERIFIED",
-    "deployment": "NOT DEPLOYED"
+    "deployment": "NOT DEPLOYED: GitHub Pages not enabled/configured for Danny"
   },
   "protected_source_repo": "https://github.com/Joenasriani/stickman",
-  "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman."
+  "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman.",
+  "repository": "https://github.com/Joenasriani/danny-game",
+  "import_commit": "1b93b6a68c431e49133069f0d728268d2f8f1bba"
 }

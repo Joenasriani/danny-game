@@ -18,4 +18,7 @@ Living Sketch: evolve line-based stickmen toward expressive hand-drawn cartoon f
 All 16 levels need manual desktop/mobile verification, including intro, transitions, audio, controls, combat, exit, game-over, and the Level 3–4–5 sequence. Current syntax/hash checks are not gameplay QA.
 
 ## Asset transfer
-The music file is larger than the GitHub connector's direct transfer limit; a temporary workflow `.github/workflows/bootstrap-danny-music.yml` is included to fetch the unchanged file by pinned source commit and remove itself. Confirm its GitHub Actions success and the music blob SHA before claiming the repository is complete.
+All six original assets were successfully copied. The large music file was retrieved by a one-time GitHub Action pinned to the exact Stickman source commit, verified using SHA-256, and committed to Danny. That bootstrap workflow removed itself. The Git blob SHA of every asset now matches its Stickman source.
+
+## Release readiness
+Run the read-only GitHub validation workflow after the completed import. GitHub Pages and public live game deployment have not been configured. Real desktop and mobile gameplay testing remain NOT VERIFIED.
