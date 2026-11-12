@@ -36,14 +36,14 @@
       body: moving ? Math.abs(a) * 5 : Math.sin(t * 0.09) * 2,
       tilt: moving ? -0.032 : air ? -0.06 : hurt ? 0.16 : 0,
       angles: {
-        cape: moving ? 0.07 + Math.sin(t * 0.45) * 0.11 : air ? 0.22 : hurt ? 0.29 : Math.sin(t * 0.11) * 0.035,
-        rearLeg: moving ? a * 0.43 : air ? -0.30 : blocking ? 0.17 : hurt ? -0.18 : Math.sin(t * 0.13) * 0.024,
-        frontLeg: moving ? -a * 0.43 : air ? 0.36 : blocking ? -0.22 : hurt ? 0.18 : -Math.sin(t * 0.13) * 0.024,
-        rearArm: moving ? -a * 0.29 : air ? -0.38 : striking ? -0.22 - Math.sin(swing * Math.PI) * 0.60 : blocking ? -0.38 : hurt ? 0.42 : 0,
-        frontArm: moving ? a * 0.23 : air ? 0.18 : striking ? 0.18 + Math.sin(swing * Math.PI) * 0.25 : blocking ? -0.65 : hurt ? -0.37 : 0,
+        cape: moving ? 0.11 + Math.sin(t * 0.45) * 0.17 : air ? 0.22 : hurt ? 0.29 : Math.sin(t * 0.11) * 0.035,
+        rearLeg: moving ? a * 0.64 : air ? -0.52 : blocking ? 0.17 : hurt ? -0.18 : Math.sin(t * 0.13) * 0.024,
+        frontLeg: moving ? -a * 0.64 : air ? 0.50 : blocking ? -0.22 : hurt ? 0.18 : -Math.sin(t * 0.13) * 0.024,
+        rearArm: moving ? -a * 0.42 : air ? -0.48 : striking ? -0.08 - Math.sin(swing * Math.PI) * 0.75 : blocking ? -0.45 : hurt ? 0.42 : 0,
+        frontArm: moving ? a * 0.37 : air ? 0.30 : striking ? 0.18 + Math.sin(swing * Math.PI) * 0.35 : blocking ? -0.72 : hurt ? -0.37 : 0,
         torso: 0,
         pouch: moving ? Math.sin(t * 0.39) * 0.08 : 0,
-        sword: striking ? -1.3 * swing : blocking ? -0.82 : air ? -0.24 : moving ? Math.sin(t * 0.39) * 0.12 : 0,
+        sword: striking ? -2.1 * swing : blocking ? -1.22 : air ? -0.38 : moving ? Math.sin(t * 0.39) * 0.10 : 0,
         head: moving ? 0.035 * b : hurt ? -0.20 : air ? 0.07 : Math.sin(t * 0.09) * 0.012
       }
     };
@@ -80,9 +80,9 @@
       map: texture, transparent: true, depthWrite: false,
       side: THREE.DoubleSide, alphaTest: 0.025
     });
-    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(1.36, 1.93), mat);
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(1.64, 2.25), mat);
     mesh.name = "DannyOriginalSketchRig";
-    mesh.position.set(0, 0.95, 0.105);
+    mesh.position.set(0, 1.115, 0.105);
     mesh.renderOrder = 50;
     playerGroup.add(mesh);
     let parts = null, loaded = false, failed = false, tick = 0;
@@ -104,6 +104,21 @@
       ctx.translate(p.pivot[0], p.pivot[1] + bodyOffset);
       ctx.rotate(angle);
       ctx.drawImage(p.canvas, p.x - p.pivot[0], p.y - p.pivot[1]);
+      ctx.restore();
+    }
+    // Kinematic sword attachment: the blade grip follows the actual wrist when
+    // the sword arm rotates, instead of orbiting around a fixed world point.
+    function drawLinkedSword(armAngle, weaponAngle, bodyOffset) {
+      const p = parts.sword;
+      const sh = SHAPES.rearArm.pivot, wr = SHAPES.sword.pivot;
+      const dx = wr[0] - sh[0], dy = wr[1] - sh[1];
+      const cx = Math.cos(armAngle), sx = Math.sin(armAngle);
+      const wristX = sh[0] + dx * cx - dy * sx;
+      const wristY = sh[1] + dx * sx + dy * cx;
+      ctx.save();
+      ctx.translate(wristX, wristY + bodyOffset);
+      ctx.rotate(armAngle + weaponAngle);
+      ctx.drawImage(p.canvas, p.x - wr[0], p.y - wr[1]);
       ctx.restore();
     }
     function update(info = {}) {
@@ -129,7 +144,7 @@
       drawPart("torso", 0, pose.body);
       drawPart("pouch", pose.angles.pouch, pose.body);
       drawPart("frontArm", pose.angles.frontArm, pose.body);
-      drawPart("sword", pose.angles.sword + pose.angles.rearArm * 0.4, pose.body);
+      drawLinkedSword(pose.angles.rearArm, pose.angles.sword, pose.body);
       drawPart("head", pose.angles.head, pose.body);
       ctx.restore();
       texture.needsUpdate = true;

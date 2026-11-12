@@ -4,6 +4,9 @@
 **Character lab:** [Inspect all six animations](https://joenasriani.github.io/danny-game/preview/danny/character-lab.html)  
 **Original full 16-level game:** https://joenasriani.github.io/danny-game/
 
+## Visual iteration after actual screenshots
+An independent inspection of real six-state rendered PNGs identified a floating sword and overly subtle poses. We corrected the sword to follow the articulated wrist, increased arm/leg swing, increased cosmetic character size and added **DANNY / MOTION LAB → ZOOM DANNY** to inspect the character in the actual Level 1 game. These changes are entirely visual. Branch QA passed as GitHub Actions run `43234778003`. After promotion to Pages, verify that the new live build passes independently.
+
 ## Exactly what changed
 Founder-approved reference PNG was kept verbatim. A nine-layer illustrated cutout puppet is assembled from that real image. A 2.5D CanvasTexture plane updates on alternate game frames and switches poses using existing playerState/stateFrame/attackTimer. The original root 16-level game is unchanged. A dedicated Level 1 HTML copy uses the original world, enemies, platform collisions, movement, sword timing, HUD, music and touch inputs; only its player graphic and a motion-preview inspector were added. It has its own browser address.
 

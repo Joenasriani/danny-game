@@ -12,6 +12,8 @@ Danny is a new, independent browser game by Joe Nasr, created from the authorita
 
 **Experimental preview (Phase 02 vertical slice, not the full game):** [Play the animated Danny prototype](https://joenasriani.github.io/danny-game/preview/danny/) · [Inspect Danny's animation laboratory](https://joenasriani.github.io/danny-game/preview/danny/character-lab.html).
 
+**Visual inspection:** Open **DANNY / MOTION LAB → ZOOM DANNY** to view the hand-drawn character at closer camera distance while playing. The isolated [animation laboratory](https://joenasriani.github.io/danny-game/preview/danny/character-lab.html) also shows the character large with each state selectable. The reviewed run/attack artwork was strengthened after initial screenshot inspection; this remains a direct cutout from the exact original sketch and not final hand-animated model art.
+
 This is the first in-game **nine-layer 2.5D cutout rig derived directly from the exact founder-approved graphite character drawing**, with idle, run, jump, fall, sword attack, block and damage visual states. It replaces **only the player artwork within a separately published Level 1 preview**. Use the in-game **DANNY / MOTION LAB** to inspect individual animations or AUTO to follow gameplay.
 
 **The original 16-level game remains at [the unchanged main game](https://joenasriani.github.io/danny-game/).** No collision, controls, original 16-level source, sound library, or mechanics were changed on the main game. The founder specifically requested these four isolated prototype tasks ahead of full Phase 01 QA closure; **Phase 01 is still OPEN** (natural Levels 2–16 and real-device testing missing). This visual prototype does not constitute final character animation quality or full Phase 02 approval.

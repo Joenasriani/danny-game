@@ -76,8 +76,14 @@
       "block",
       "hit"
     ],
-    "source_status": "Isolated prototype code passed branch browser QA; publication and live Pages QA PENDING",
+    "source_status": "Live isolated preview passed initial published URL, real rig and responsive input QA in run 43233759903; visual rig v2 staged for updated Pages deployment; live v2 QA pending",
     "main_16_level_game_unchanged": true,
-    "phase01_qa": "OPEN; full 16-level normal playthrough and real-device QA not verified"
+    "phase01_qa": "OPEN; full 16-level normal playthrough and real-device QA not verified",
+    "visual_refinement": {
+      "wrist_linked_sword": true,
+      "improved_pose_silhouettes": true,
+      "visual_only_camera_zoom": true,
+      "branch_qa_run": 43234778003
+    }
   }
 }
