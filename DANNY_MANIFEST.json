@@ -44,7 +44,8 @@
     "js_syntax": "Verified by GitHub Actions Verify Danny (read only) for source baseline; automated JS syntax is not gameplay testing.",
     "browser_gameplay": "PARTIAL: GitHub Actions Playwright Chromium run 43217241904 PASS; live desktop/emulated viewport smoke, all 16 level build/exit runtime, camera signs and scripted transitions verified. NOT VERIFIED: all-level natural playthrough, fairness, complete audio and physical devices.",
     "mobile": "PARTIAL: browser emulation 390x844, 844x390, 768x1024 passed canvas/UI/touch-button smoke, but NOT VERIFIED on physical mobile/tablet or all gestures.",
-    "deployment": "COMPLETE: GitHub Pages native branch build passed for commit 92a1dcb94b6bd97138b6014c32a801baa83c293c (run 43211005975), live URL HTTP 200 with Danny title/subtitle verified 2026-11-12. This is not manual gameplay QA."
+    "deployment": "COMPLETE: GitHub Pages native branch build passed for commit 92a1dcb94b6bd97138b6014c32a801baa83c293c (run 43211005975), live URL HTTP 200 with Danny title/subtitle verified 2026-11-12. This is not manual gameplay QA.",
+    "visual_capture": "PASS: GitHub Actions run 43218599518 captured seven actual published-game screenshots and committed docs/visual-evidence at 66fb49003b89090d2f44569b9ab856bcba85e682; founder visual approval PENDING; not a physical-device playthrough."
   },
   "protected_source_repo": "https://github.com/Joenasriani/stickman",
   "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman.",

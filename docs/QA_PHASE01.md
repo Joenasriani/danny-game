@@ -56,7 +56,7 @@ Headless Chromium actually constructed **all 16 levels**, and every level passed
 
 ## Visual review
 
-See [Visual review instructions](VISUAL_REVIEW.md) and, after capture completes, [screenshots of the actual deployed game](visual-evidence/README.md). Screenshot QA addresses layout and visual communication, not full 16-level playability. Live capture automation must pass and images must be inspected before marking a visual check passed.
+See [Visual review instructions](VISUAL_REVIEW.md) and, after capture completes, [screenshots of the actual deployed game](visual-evidence/README.md). Screenshot QA addresses layout and visual communication, not full 16-level playability. **Actual-game capture succeeded** in GitHub Actions run `43218599518` and auto-committed the gallery at `66fb49003b89090d2f44569b9ab856bcba85e682` (7 PNG captures: desktop intro, desktop Levels 1/4/16, emulated portrait, emulated landscape and emulated tablet Level 1). Images are now available for founder inspection; **visual approval has not been granted**. Full natural gameplay and real-device checks remain OPEN.
 
 ## Phase gate
 
