@@ -11,4 +11,6 @@ State map:
 - `block`: arm brace and raised blade
 - `hit` / damage: torso/head recoil, limbs thrown out briefly; existing damage code remains authoritative
 
-Animation poses intentionally use a limited-angle cutout approach for *prototype fidelity* with the approved sheet. Known limitations: cutout edges, hand-drawn original frontal pose, 2.5D flattening at large camera yaw, and lack of individually illustrated in-betweens. These limitations should be judged visually using the [character lab](../../preview/danny/character-lab.html). No claim of full cinematic final animation quality.
+Animation poses intentionally use a limited-angle cutout approach for *prototype fidelity* with the approved sheet. **Visual QA correction:** The first actually rendered six-state sheet exposed a sword/grip detachment during animated poses. The prototype now uses a hierarchical wrist attachment so the sword follows the rotated sword arm, with stronger run/jump silhouettes and a modestly larger in-world figure. These are visual-only changes; no collision or attack timing code is altered.
+
+Known limitations: cutout edges, hand-drawn original frontal pose, 2.5D flattening at large camera yaw, and lack of individually illustrated in-betweens. These limitations should be judged visually using the [character lab](../../preview/danny/character-lab.html). No claim of full cinematic final animation quality.

@@ -649,10 +649,16 @@ html, body {
  <button type="button" data-dannymotion="attack">SWORD</button>
  <button type="button" data-dannymotion="block">BLOCK</button>
  <button type="button" data-dannymotion="hit">DAMAGE</button>
+ <button type="button" id="dannyFocusToggle">ZOOM DANNY</button>
  </div><small id="dannyProtoNote">Pose preview only · original gameplay remains authoritative</small>
  </details></div>
 <script>
 window.dannyVisualDemoState = null;
+document.getElementById('dannyFocusToggle').addEventListener('click',e=>{
+ if (typeof window.DannyPreviewFocus !== 'function') return;
+ const v=window.DannyPreviewFocus();
+ e.currentTarget.textContent=v.close?'WIDE VIEW':'ZOOM DANNY';
+});
 document.querySelectorAll('[data-dannymotion]').forEach(b=>b.addEventListener('click',()=>{
  window.dannyVisualDemoState=b.dataset.dannymotion||null;
  document.querySelectorAll('[data-dannymotion]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
@@ -3285,6 +3291,13 @@ document.querySelectorAll('[data-dannymotion]').forEach(b=>b.addEventListener('c
 
       let animationFrameId = 0;
 
+      // Cinematic inspection zoom only. It affects framing, never physics or collisions.
+      window.DannyPreviewFocus = () => {
+        const closeDistance = isPortraitViewport() ? 18 : 9;
+        const atClose = Math.abs(orbit.distance - closeDistance) < 1.2;
+        orbit.distance = clampCameraDistance(atClose ? getDefaultCameraDistance() : closeDistance);
+        return { distance: orbit.distance, close: !atClose };
+      };
       function animate() {
         animationFrameId = requestAnimationFrame(animate);
         const dt = Math.min(clock.getDelta(), 0.05);
