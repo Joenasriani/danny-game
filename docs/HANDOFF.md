@@ -5,6 +5,9 @@
 
 **Authority:** This repository only. Based on `Joenasriani/stickman` commit `b7a7e2737a9087154f50bead2f159e425fcada34`, whose source SHA-256 is `320413936fca080b1b2fbb3285e0b094e32f736ff0dd90b72c65543a3f85ad4f`.
 
+## Founder-directed isolated animated preview (2026-11-12)
+The founder explicitly commissioned a **four-task animation prototype**: 9-layer character construction, six animated action states, source-preserving Level 1 integration, and independent live preview. Source and six-state in-browser QA passed on development branch `feature/danny-living-sketch-level1` (GitHub Actions run `43233203223`) before promotion to the segregated `preview/danny/` subtree in main. The original root `index.html` must remain bit-for-bit unchanged. Preview: https://joenasriani.github.io/danny-game/preview/danny/ (separate from original game URL). **Do not equate the founder's prototype request with authorization to mark Phase 01 QA complete.** Verify Pages publication and the actual live preview independently before asserting deployment passed.
+
 ## Locked character-design asset (2026-11-12)
 
 Read [Danny's canonical character sheet](character/CANONICAL_CHARACTER.md) and visually inspect [the exact original approved PNG](character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png) **before designing, rigging, or animating Danny**. SHA-256 `e4adce3822c367516ae2c5d6ca3d03b426e67feace021be5f8c92eda83735fe2`. This precise sheet, not a stylistically similar substitute, is the visual identity to preserve. A complete technical turnaround and animation-ready character bible remain Phase 01 deliverables; an **animated playable Danny prototype is Phase 02**, not an already delivered feature. The source game remains unchanged.

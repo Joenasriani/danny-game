@@ -59,5 +59,25 @@
     "bytes": 3891402,
     "approved_on": "2026-11-12",
     "status": "LOCKED DESIGN REFERENCE ONLY; Phase 02 builds the animated playable prototype; implementation NOT STARTED"
+  },
+  "animated_danny_prototype": {
+    "path": "preview/danny/index.html",
+    "url": "https://joenasriani.github.io/danny-game/preview/danny/",
+    "preview_level_count": 1,
+    "art_source": "docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png",
+    "dev_branch": "feature/danny-living-sketch-level1",
+    "branch_validation_run": 43233203223,
+    "states": [
+      "idle",
+      "run",
+      "jump",
+      "fall",
+      "attack",
+      "block",
+      "hit"
+    ],
+    "source_status": "Isolated prototype code passed branch browser QA; publication and live Pages QA PENDING",
+    "main_16_level_game_unchanged": true,
+    "phase01_qa": "OPEN; full 16-level normal playthrough and real-device QA not verified"
   }
 }

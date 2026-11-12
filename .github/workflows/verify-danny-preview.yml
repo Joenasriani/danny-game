@@ -1,0 +1,42 @@
+name: Verify Danny separate live animation preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'preview/danny/**'
+      - 'tools/qa_danny_preview_live.mjs'
+      - '.github/workflows/verify-danny-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live-review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Wait for separate Pages route
+        run: |
+          for i in $(seq 1 35); do
+            if curl --fail -LsS "https://joenasriani.github.io/danny-game/preview/danny/index.html?check=${GITHUB_SHA}" -o /tmp/danny-prototype.html; then
+              if grep -q 'Danny – Living Sketch' /tmp/danny-prototype.html; then exit 0; fi
+            fi
+            sleep 8
+          done
+          echo 'Separate prototype was not published in time' >&2
+          exit 1
+      - name: Verify actual public preview at desktop and emulated mobile viewports
+        run: node tools/qa_danny_preview_live.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: actual-deployed-danny-character-screenshots
+          path: qa-output/danny-live/
+          retention-days: 30

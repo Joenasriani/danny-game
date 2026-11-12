@@ -8,6 +8,14 @@ Danny is a new, independent browser game by Joe Nasr, created from the authorita
 
 **The founder-approved original sheet is frozen as the visual source of truth:** [View Danny's character reference and production rules](docs/character/CANONICAL_CHARACTER.md). The exact uploaded PNG is stored at [docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png](docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png). It defines Danny as a boy, with his recognizable cap/hair, scarf, tunic, belt pouch, boots and sword, and expressive graphite animation language. **Phase 01 locks the design/character bible; Phase 02 builds the animated, playable one-level prototype; Phase 03 rolls the approved treatment across 16 levels.**
 
+## Animated Danny – isolated Level 1 prototype
+
+**Experimental preview (Phase 02 vertical slice, not the full game):** [Play the animated Danny prototype](https://joenasriani.github.io/danny-game/preview/danny/) · [Inspect Danny's animation laboratory](https://joenasriani.github.io/danny-game/preview/danny/character-lab.html).
+
+This is the first in-game **nine-layer 2.5D cutout rig derived directly from the exact founder-approved graphite character drawing**, with idle, run, jump, fall, sword attack, block and damage visual states. It replaces **only the player artwork within a separately published Level 1 preview**. Use the in-game **DANNY / MOTION LAB** to inspect individual animations or AUTO to follow gameplay.
+
+**The original 16-level game remains at [the unchanged main game](https://joenasriani.github.io/danny-game/).** No collision, controls, original 16-level source, sound library, or mechanics were changed on the main game. The founder specifically requested these four isolated prototype tasks ahead of full Phase 01 QA closure; **Phase 01 is still OPEN** (natural Levels 2–16 and real-device testing missing). This visual prototype does not constitute final character animation quality or full Phase 02 approval.
+
 ## Current build
 - 16 levels numbered **1–16**, including the rebuilt **Broken Arch Passage** at Level 4.
 - Game title and intro subtitle are Danny-branded.
