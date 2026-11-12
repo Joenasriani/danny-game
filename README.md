@@ -23,6 +23,10 @@ Source: https://github.com/Joenasriani/stickman at commit `b7a7e2737a9087154f50b
 
 Danny is **not a GitHub fork**. Its history begins here. Original Stickman repository, GitHub Pages, and itch.io remain untouched.
 
+## Approved creative direction and development rules
+- [Locked cinematic Living Sketch plan and repository-synchronization policy](docs/CREATIVE_DIRECTION_LOCK.md) – founder-approved; preserve Danny as a boy and treat gameplay as authoritative.
+- **Commit rule:** implementation, README, manifest, handoff and relevant QA records must remain synchronized in the same commit; reverify the resulting HEAD. Do not claim untested features are live.
+
 ## Next step
 Prototype an optional **Living Sketch** visual mode: expressive pencil-drawn characters, graphite hatching, controlled line boil, and hand-drawn architecture. Use an isolated branch and preserve all mobile-first/desktop-responsive gameplay behavior.
 

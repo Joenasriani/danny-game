@@ -5,6 +5,11 @@
 
 **Authority:** This repository only. Based on `Joenasriani/stickman` commit `b7a7e2737a9087154f50bead2f159e425fcada34`, whose source SHA-256 is `320413936fca080b1b2fbb3285e0b094e32f736ff0dd90b72c65543a3f85ad4f`.
 
+## Locked authority and mandatory commit process
+Read [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md) **before any Danny design or code work**. It locks Danny as a **boy** and the Living Sketch cinematic direction. The player controls Danny; the director controls the presentation. Cinematic storytelling must never obscure gameplay or compromise input responsiveness.
+
+**Mandatory per-commit synchronization:** Whenever implementation changes, update all affected README, handoff, manifest hashes/status, QA and related guidance **in the same commit**; confirm HEAD and automated checks afterward. Record unverified items explicitly. Founder-locked decisions require explicit approval to revise. The canonical creative plan is the linked file, not the old short roadmap below.
+
 ## Initial changes
 Only browser title and intro branding were updated. Gameplay level list 1–16, new Level 4, enemies, physics, touch controls, camera gestures, and assets stay identical to Stickman source.
 
