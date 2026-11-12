@@ -1,7 +1,7 @@
 {
   "project": "Danny",
   "subtitle": "The man who Sword the world!",
-  "stage": "independent 16-level baseline copied with all original runtime assets; character redesign not started",
+  "stage": "independent 16-level original game preserved; separate founder-commissioned Living Sketch Level 1 experimental character puppet implemented and deployed (Phase 02 proof, not final art)",
   "source_repository": "https://github.com/Joenasriani/stickman",
   "source_commit": "b7a7e2737a9087154f50bead2f159e425fcada34",
   "source_game_sha256": "320413936fca080b1b2fbb3285e0b094e32f736ff0dd90b72c65543a3f85ad4f",
@@ -76,7 +76,7 @@
       "block",
       "hit"
     ],
-    "source_status": "Initial isolated live preview and branch QA passed; final adjusted cinematic framing staged for main Pages verification.",
+    "source_status": "LIVE / VERIFIED: prototype at https://joenasriani.github.io/danny-game/preview/danny/; native Pages deployment and independent Chromium desktop/emulated mobile checks PASS on source commit d9ba277747a70b45d31205c293b9876aa2524892, run 43236119621. Founder visual-quality approval and real-device QA PENDING.",
     "main_16_level_game_unchanged": true,
     "phase01_qa": "OPEN; full 16-level normal playthrough and real-device QA not verified",
     "visual_refinement": {
@@ -85,6 +85,9 @@
       "visual_only_camera_zoom": true,
       "branch_qa_run": 43235773044,
       "close_default_camera": true
-    }
+    },
+    "live_qa_run": 43236119621,
+    "live_source_commit": "d9ba277747a70b45d31205c293b9876aa2524892",
+    "live_screenshots_artifact": 13952381959
   }
 }

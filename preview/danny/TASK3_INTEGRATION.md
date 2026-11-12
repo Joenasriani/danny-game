@@ -1,5 +1,5 @@
 # Danny – TASK 3: Isolated playable Level 1
-**Status:** prototype implemented on isolated development branch; browser QA and deployment pending.
+**Status: TASK 3 COMPLETE / VERIFIED.** Original level/collision/audio/controls remain copied from main, and real browser desktop/mobile QA passed in branch run `43235773044`, then live public preview run `43236119621` (no uncaught JS errors).
 Branch: `feature/danny-living-sketch-level1`.
 
 `preview/danny/index.html` is copied from the authoritative 16-level main game, then receives **only cosmetic and isolation adjustments**:
@@ -12,5 +12,4 @@ Branch: `feature/danny-living-sketch-level1`.
 - A collapsible "MOTION LAB" control can show each animation pose independent of gameplay for visual review; choose AUTO for gameplay state synchronization.
 - This is **not the final Living Sketch environment or full all-level release**, and a flat 2.5D cutout has oblique-camera limitations.
 
-Preview path once deployed: `https://joenasriani.github.io/danny-game/preview/danny/` (pending check).
-Do not present it as live until actual Pages success plus Playwright gameplay/visual validation.
+**TASK 4: COMPLETE / LIVE RECHECKED.** Independent preview: `https://joenasriani.github.io/danny-game/preview/danny/`. GitHub Pages and Chromium actual public-page verification succeeded (run `43236119621`); original root game remained unmodified. Current visual quality still needs founder review.

@@ -28,5 +28,9 @@ The recorded run uses real ArrowRight and ArrowUp browser inputs against the dep
 ## Tablet – emulated 768 × 1024
 ![Danny emulated tablet Level 1](tablet-level-01.png)
 
+## Danny's NEW animated character – separate playable Level 1 preview
+
+The screenshots above depict **the original 16-level baseline**, not the new character. The new **actual live playable animated character** is at [Danny Living Sketch Level 1](https://joenasriani.github.io/danny-game/preview/danny/), and the [large character animation laboratory](https://joenasriani.github.io/danny-game/preview/danny/character-lab.html) lets you inspect all six states. Fresh screenshots recorded from the deployed animated game are available in the [successful live Chromium QA run 43236119621](https://github.com/Joenasriani/danny-game/actions/runs/43236119621/artifacts/13952381959). A screenshot is not equivalent to playing; founder visual approval and physical-device QA remain pending.
+
 ## Current acceptance boundary
 Phase 01 Task 2 remains **PARTIAL / OPEN**: full natural level-by-level gameplay, real Android/iOS and tablet hardware, actual gesture quality, sound and platform reachability are not yet verified. Refer to [the QA register](../QA_PHASE01.md) for exact evidence and outstanding items.

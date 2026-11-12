@@ -18,11 +18,13 @@ This is the first in-game **nine-layer 2.5D cutout rig derived directly from the
 
 **The original 16-level game remains at [the unchanged main game](https://joenasriani.github.io/danny-game/).** No collision, controls, original 16-level source, sound library, or mechanics were changed on the main game. The founder specifically requested these four isolated prototype tasks ahead of full Phase 01 QA closure; **Phase 01 is still OPEN** (natural Levels 2–16 and real-device testing missing). This visual prototype does not constitute final character animation quality or full Phase 02 approval.
 
+**Four-step isolated prototype status: COMPLETED / INDEPENDENTLY RECHECKED (2026-11-12).** Canonical original sketch 9-layer rig, six visual animation states, unchanged-mechanics Level 1 integration, and an independent live GitHub Pages URL all verified. Branch headless browser QA: [run 43235773044](https://github.com/Joenasriani/danny-game/actions/runs/43235773044). Live public Pages deployment, correct original art, Level 1, start, keyboard/touch controls, cinematic close/wide camera toggle, no uncaught errors across Chromium desktop and emulated mobile portrait/landscape: [run 43236119621](https://github.com/Joenasriani/danny-game/actions/runs/43236119621). **Founder visual quality approval remains pending; this is NOT a finished game or Phase 01 QA closure.**
+
 ## Current build
 - 16 levels numbered **1–16**, including the rebuilt **Broken Arch Passage** at Level 4.
 - Game title and intro subtitle are Danny-branded.
 - All original movement, sword combat, enemies, collision, audio behavior, mobile touch input, and **grab-the-world** camera controls are retained.
-- **Living Sketch cartoon character rendering has not been implemented yet**. This is the next art-direction experiment, not a claim about the current game.
+- **Main 16-level game:** original Stickman geometry remains intact. **Separate prototype:** original-canonical-sketch cutout puppet with six in-game visual states has been implemented and deployed only in [the playable Level 1 preview](https://joenasriani.github.io/danny-game/preview/danny/). This is experimental, not the finished cinematic redesign.
 - Three.js r128 is an external CDN dependency.
 
 ## Files
