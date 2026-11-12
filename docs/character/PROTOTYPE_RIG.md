@@ -1,0 +1,9 @@
+# Danny Level 1 – Actual Canonical-Pencil Cutout Puppet (TASK 1)
+Status: **Task 1 implemented in isolated branch, pending actual browser rendering verification.**
+The artist-approved exact reference at `docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png` is read at runtime. Its central hero drawing is **cut into nine visually distinguishable pivoted layers**: cap/face/hair, cape, rear/front arm, rear/front leg, torso, pouch and sword. This is a concept-derived 2.5D pivot rig, NOT newly designed substitute character. It deliberately keeps the pencil graphite image directly recognizable; white/paper layer boundaries and perspective limitations may remain during the prototype. The authoritative original PNG is never overwritten.
+
+Original source crop: x385 y160 w590 h890 (reference image 1448×1086). Runtime texture 512×768, one alpha canvas plane with 9 polygon-clipped drawings; every alternate game frame updates. Sprite size 1.36×1.93 world units and an independently transformed 2.5D plane. Sword stays separate for directional attack poses. Figure art is cosmetic: playerGroup world positioning and collision/physics are external. The source gameplay engine still owns velocity, jump, damage, attack window, camera, level definition and enemies.
+
+**Locked artwork rule:** Do not alter `docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png`. New models or interpretations require founder visual sign-off. This rig's fidelity must be judged on a REAL deployed browser screenshot, not a generated advertisement.
+
+Phase 02 proof track: Task 1 rig -> Task 2 6 state animations -> Task 3 Level 1 gameplay integration -> Task 4 isolated published preview. No claim about any of the remaining work until independently verified.
