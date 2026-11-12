@@ -54,6 +54,10 @@ Headless Chromium actually constructed **all 16 levels**, and every level passed
 
 **Explicit coverage boundary:** All-level runtime construction and **scripted exit teleports** are not natural playthroughs. Emulated touch viewports are not physical-device tests. Audio audibility, sustained gameplay performance, platform reachability, combat fairness, all gesture types and completion of every level by normal input are NOT VERIFIED. These remain Phase 01 Task 2 acceptance checks.
 
+## Visual review
+
+See [Visual review instructions](VISUAL_REVIEW.md) and, after capture completes, [screenshots of the actual deployed game](visual-evidence/README.md). Screenshot QA addresses layout and visual communication, not full 16-level playability. Live capture automation must pass and images must be inspected before marking a visual check passed.
+
 ## Phase gate
 
 **Task 2 cannot be marked COMPLETE until the interactive matrix is evidenced.** Successful source validation, an HTML page response, or timed-out browser automation are not equivalent to gameplay verification. The owner may supply actual-device test reports; a capable interactive browser environment may independently perform the checks. Do not begin Task 3 or later phases until Task 2 is rechecked and completed, per founder's sequential execution instruction.

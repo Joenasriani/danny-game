@@ -39,5 +39,8 @@ The repository owner selected **Deploy from a branch → main → / (root)** on 
 ## Phase 01 – Task 2: Gameplay QA checkpoint
 [QA_PHASE01.md](QA_PHASE01.md) is the authoritative pass/pending matrix. Game source validation and live HTML delivery are confirmed. The initial external interactive-browser attempts timed out. A subsequent actual Playwright Chromium GitHub Actions run `43217241904` **PASSED** across desktop and three emulated mobile/tablet viewports, including real canvas and basic controls, all sixteen level runtime builds, and scripted transitions. This is **not** a natural 16-level playthrough or a physical-device test. Manual full progression, mobile gestures on devices, audio and fairness remain **NOT VERIFIED**. Follow founder's task-by-task rule: stop before Task 3 until Task 2 has real evidence and is rechecked.
 
+## Visual-first review path
+The founder reviews visually. Phase 01 Task 2 includes an automated Playwright screenshot workflow producing an [actual-game visual gallery](visual-evidence/README.md), covering desktop, emulated mobile portrait/landscape, tablet and selected levels. Visual evidence is required before discussing design decisions; screenshots alone do not close manual gameplay QA. Verify capture status and real images before claiming visual review is ready.
+
 ## Release readiness
 Run the read-only GitHub validation workflow after the completed import. GitHub Pages branch-source configuration was selected by the owner, but live publishing and accessibility remain unverified until checked. Real desktop and mobile gameplay testing remain NOT VERIFIED.
