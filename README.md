@@ -4,6 +4,10 @@
 
 Danny is a new, independent browser game by Joe Nasr, created from the authoritative 16-level *In a Stickman's World* gameplay baseline.
 
+## Locked canonical Danny character
+
+**The founder-approved original sheet is frozen as the visual source of truth:** [View Danny's character reference and production rules](docs/character/CANONICAL_CHARACTER.md). The exact uploaded PNG is stored at [docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png](docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png). It defines Danny as a boy, with his recognizable cap/hair, scarf, tunic, belt pouch, boots and sword, and expressive graphite animation language. **Phase 01 locks the design/character bible; Phase 02 builds the animated, playable one-level prototype; Phase 03 rolls the approved treatment across 16 levels.**
+
 ## Current build
 - 16 levels numbered **1–16**, including the rebuilt **Broken Arch Passage** at Level 4.
 - Game title and intro subtitle are Danny-branded.

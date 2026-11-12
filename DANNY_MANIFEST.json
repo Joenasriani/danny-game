@@ -50,5 +50,14 @@
   "protected_source_repo": "https://github.com/Joenasriani/stickman",
   "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman.",
   "repository": "https://github.com/Joenasriani/danny-game",
-  "import_commit": "1b93b6a68c431e49133069f0d728268d2f8f1bba"
+  "import_commit": "1b93b6a68c431e49133069f0d728268d2f8f1bba",
+  "approved_character_reference": {
+    "path": "docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png",
+    "sha256": "e4adce3822c367516ae2c5d6ca3d03b426e67feace021be5f8c92eda83735fe2",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 3891402,
+    "approved_on": "2026-11-12",
+    "status": "LOCKED DESIGN REFERENCE ONLY; Phase 02 builds the animated playable prototype; implementation NOT STARTED"
+  }
 }

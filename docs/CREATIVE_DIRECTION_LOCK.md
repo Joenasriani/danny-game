@@ -10,6 +10,10 @@
 
 **Danny is an animated film that happens to be playable**, not merely a platformer with upgraded graphics. The game must have its own cinematic, narrative, and visual identity beyond the Stickman baseline. The player controls Danny; the director controls the presentation.
 
+## Canonical character sheet – founder-approved 2026-11-12
+
+The exact approved Danny image is now preserved at [character reference sheet](character/CANONICAL_CHARACTER.md) and [unmodified original PNG](character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png). **This specific image is the locked visual source of truth.** Do not replace it with a newly invented character, generic stickman, unrelated cartoon boy, or a merely similar AI rendering. Further front/side/3/4 turnarounds and animation artwork must be derived consistently from this sheet and reviewed visually. The original PNG was imported with SHA-256 integrity verification. Phase 01 concerns design/art preparation; **Phase 02 is where the animated playable character is built and integrated**. This does not override Phase 01 QA or phase approval gates.
+
 ## Character
 
 - **Danny is a boy.** This is an explicit, fixed character requirement.
