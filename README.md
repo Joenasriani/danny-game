@@ -50,7 +50,7 @@ Deployment source: **Deploy from a branch → main → / (root)** (selected by r
 
 ## Phase 01 gameplay QA status
 **Task 1:** COMPLETE – GitHub Pages deployed and a live HTTP 200 intro response verified.
-**Task 2:** PARTIALLY VERIFIED / OPEN – live Chromium smoke passed on desktop and emulated mobile/tablet, and scripted all-16-level runtime/transition checks passed (Actions run `43217241904`). **Real-device QA and a natural complete playthrough remain unverified**; see [QA register](docs/QA_PHASE01.md). Do not advance to character creation until its acceptance gate passes.
+**Task 2:** PARTIALLY VERIFIED / OPEN – live Chromium smoke passed on desktop and emulated mobile/tablet, and scripted all-16-level runtime/transition checks passed (Actions run `43217241904`). **A keyboard-controlled live Level 1 playthrough reached Level 2** (video and trace: [GitHub Actions run 43228950032](https://github.com/Joenasriani/danny-game/actions/runs/43228950032)); full natural 16-level and physical-device QA remain unverified; see [QA register](docs/QA_PHASE01.md). Do not advance to character creation until its acceptance gate passes.
 
 ## Visual game review
 Review [desktop, mobile portrait, landscape, tablet and selected level screenshots](docs/visual-evidence/README.md) (captured and committed successfully in GitHub Actions run `43218599518` from the live game). These are baseline visual QA evidence, not the future Living Sketch character redesign or proof of complete gameplay.

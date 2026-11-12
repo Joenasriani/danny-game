@@ -1,6 +1,6 @@
 # Danny – Phase 01 Task 2 Gameplay QA Register
 
-**Status:** OPEN / NOT VERIFIED
+**Status:** PARTIAL / OPEN – live Chromium tests and input-driven Level 1 complete; full 16-level/manual-device QA not verified
 **Date:** 2026-11-12
 **Authority:** Frozen [ROADMAP.md](ROADMAP.md), Phase 01 Task 2. This register is evidence tracking, not approval of changes to gameplay.
 **Test URL:** https://joenasriani.github.io/danny-game/
@@ -61,6 +61,14 @@ See [Visual review instructions](VISUAL_REVIEW.md) and, after capture completes,
 ## Input-driven traversal probe – experimental (pending evidence)
 
 A separate [Level 1 Chromium input-driven probe](../tools/qa_level01_play.mjs) exercises real ArrowRight and ArrowUp browser inputs against the live Danny game, with limited read-only state instrumentation and a recorded video/screenshot artifact. It uses three targeted jump timing strategies and reports actual level progression. This **cannot substitute for full human playthrough, all sixteen levels or physical-device testing**. Do not record a pass unless the separate GitHub Actions run succeeds and the input trace supports the result. The experiment never modifies the published game source.
+
+## Input-driven live Level 1 completion – VERIFIED (2026-11-12)
+
+- **Actual GitHub Actions browser run:** https://github.com/Joenasriani/danny-game/actions/runs/43228950032 – all job steps passed.
+- **Visual evidence:** [download recorded Playwright game video, screenshot and state trace](https://github.com/Joenasriani/danny-game/actions/runs/43228950032/artifacts/13947694591) (GitHub Actions artifact; may require GitHub login; retained 30 days).
+- **Test methodology:** The real published game was controlled using browser keyboard events `ArrowRight` and `ArrowUp`; game code/physics were **not** modified and **no teleport** was used. Temporary browser-only read-only instrumentation reported player location and level. One run completed Level 1 and advanced naturally to **Level 2**, with no uncaught JavaScript errors and five remaining HP.
+- **Observed checkpoints:** first jump at x≈−3.04, grounded x≈3.39 after first jump, then reached Level 2 after second jump. The probe is a **computer-controlled playthrough of Level 1 only**. It is NOT a human desktop playthrough, a physical mobile-device test, a Level 4 reachability verification, an entire 16-level playthrough, a sound quality assessment, or creative approval.
+- **Next gate:** Natural progression of remaining levels and physical-device touch/audio still OPEN. Retain Phase 01 Task 2 as **PARTIAL** and do not advance to the character-construction task.
 
 ## Phase gate
 
