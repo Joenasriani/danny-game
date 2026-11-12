@@ -39,8 +39,10 @@ No visual character redesign has been implemented; phase gates require founder r
 ## Asset transfer
 All six runtime assets were copied and their Git blob checksums matched the source repository; the one-time transfer workflow was retired automatically.
 
-## Independent live preview
-The Danny-only GitHub Pages deployment workflow is in [.github/workflows/deploy-danny-pages.yml](.github/workflows/deploy-danny-pages.yml). The expected URL is `https://joenasriani.github.io/danny-game/`, **but do not treat it as live until the deployment action succeeds and the page is checked**. **BLOCKED (Phase 01 Task 1):** GitHub Actions validation passes, but Pages creation failed with `Resource not accessible by integration`. An account administrator must open **Settings → Pages → Build and deployment → Source: GitHub Actions**, save, then re-run the deployment workflow. Do not call Danny's preview live until the action succeeds and the actual page is checked. This does not touch Stickman's deployment.
+## Independent GitHub Pages preview
+Deployment source: **Deploy from a branch → main → / (root)** (selected by repository owner on 2026-11-12). GitHub Pages should publish at https://joenasriani.github.io/danny-game/ . The previous custom GitHub Actions Pages workflow was removed after it failed to create the Pages site due to a permissions limitation; the independent `Verify Danny (read only)` validation workflow remains active.
+
+**Phase 01 Task 1 deployment verification is pending:** do not claim the live site is accessible, correct or playable until independently checked. Manual desktop/mobile gameplay QA is a separate Phase 01 task.
 
 ## Verification
 Run `python3 tools/validate_danny.py` (Python 3 and Node.js). Automated checks validate hashes and syntax, **not** real browser playthrough. Full mobile/desktop QA remains open.

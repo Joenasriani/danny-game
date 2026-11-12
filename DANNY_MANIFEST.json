@@ -41,10 +41,10 @@
   "checks": {
     "html_and_five_assets": "All six original asset Git blob hashes matched at repository import; Danny-branded index SHA checked",
     "music": "Transferred via pinned-source one-time workflow; Git blob matches original",
-    "js_syntax": "Passed locally on exact Danny-branded source; GitHub CI recheck pending",
+    "js_syntax": "Verified by GitHub Actions Verify Danny (read only) for source baseline; automated JS syntax is not gameplay testing.",
     "browser_gameplay": "NOT VERIFIED",
     "mobile": "NOT VERIFIED",
-    "deployment": "BLOCKED / NOT DEPLOYED: CI release validator PASS; Pages workflow fails because GitHub App token lacks permission to create Pages site. Owner must enable Pages in repo Settings > Pages > Build and deployment > GitHub Actions, then rerun and verify public URL."
+    "deployment": "PENDING LIVE CHECK: owner selected GitHub Pages branch deployment main / (root); obsolete failed custom Pages Actions workflow removed; published URL/content and real gameplay NOT VERIFIED"
   },
   "protected_source_repo": "https://github.com/Joenasriani/stickman",
   "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman.",
