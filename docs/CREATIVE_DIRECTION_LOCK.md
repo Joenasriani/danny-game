@@ -44,6 +44,9 @@
 
 ## Approved implementation sequence
 
+**Three-phase execution mapping (2026-11-12):** See [ROADMAP.md](ROADMAP.md). Phase 01 covers steps 1–2 below; Phase 02 covers steps 3–5, including prototype verification and founder approval; Phase 03 covers step 6 and full release verification. This mapping does not replace or relax the founder-approved six steps, cinematography principles, or per-commit synchronization rules.
+
+
 1. Establish an independently deployed and verified Danny baseline; keep original Stickman release separate.
 2. Develop Danny's character bible: boy character design, facial language, silhouette, outfit, sword, acting poses, running, jumping, falling, attack and reaction sheets.
 3. Prototype Living Sketch rendering and the expressive character in **one isolated scene/level and a dedicated development branch**.

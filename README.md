@@ -27,8 +27,13 @@ Danny is **not a GitHub fork**. Its history begins here. Original Stickman repos
 - [Locked cinematic Living Sketch plan and repository-synchronization policy](docs/CREATIVE_DIRECTION_LOCK.md) – founder-approved; preserve Danny as a boy and treat gameplay as authoritative.
 - **Commit rule:** implementation, README, manifest, handoff and relevant QA records must remain synchronized in the same commit; reverify the resulting HEAD. Do not claim untested features are live.
 
-## Next step
-Prototype an optional **Living Sketch** visual mode: expressive pencil-drawn characters, graphite hatching, controlled line boil, and hand-drawn architecture. Use an isolated branch and preserve all mobile-first/desktop-responsive gameplay behavior.
+## Three-phase production roadmap
+See [the authoritative three-phase roadmap](docs/ROADMAP.md):
+1. **The Birth of Danny** – independent playable baseline, desktop/mobile QA, boy character bible and style approval (**in progress**).
+2. **The Living Sketch** – a cinematic, expressive, playable one-level vertical slice on an isolated branch (**not started**).
+3. **The World of Danny** – roll out the approved production system across all 16 levels and verify the independent release (**not started**).
+
+No visual character redesign has been implemented; phase gates require founder review and gameplay verification.
 
 ## Asset transfer
 All six runtime assets were copied and their Git blob checksums matched the source repository; the one-time transfer workflow was retired automatically.

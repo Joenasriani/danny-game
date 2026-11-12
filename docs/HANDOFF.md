@@ -10,14 +10,17 @@ Read [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md) **before any Danny
 
 **Mandatory per-commit synchronization:** Whenever implementation changes, update all affected README, handoff, manifest hashes/status, QA and related guidance **in the same commit**; confirm HEAD and automated checks afterward. Record unverified items explicitly. Founder-locked decisions require explicit approval to revise. The canonical creative plan is the linked file, not the old short roadmap below.
 
+## Active three-phase execution plan
+The authoritative implementation phases are in [ROADMAP.md](ROADMAP.md): **Phase 01 – The Birth of Danny (in progress); Phase 02 – The Living Sketch (not started); Phase 03 – The World of Danny (not started)**. The roadmap maps all previously locked steps and gates without changing [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md). Start with Danny-only deployment and desktop/mobile baseline QA and character bible; do not jump to all-level visual rollout.
+
 ## Initial changes
 Only browser title and intro branding were updated. Gameplay level list 1–16, new Level 4, enemies, physics, touch controls, camera gestures, and assets stay identical to Stickman source.
 
 ## Protected other project
 Do not push or open PRs against `Joenasriani/stickman`. Do not reuse its deployment destinations. Danny must have its own game identity, issue tracker, release and deployment setup.
 
-## Visual roadmap
-Living Sketch: evolve line-based stickmen toward expressive hand-drawn cartoon figures. This is more than a shader for detailed character geometry, so first prototype one isolated 16-level-compatible character scene. Preserve mechanical hitboxes, controls and mobile performance.
+## Visual production scope
+The implementation details, acceptance gates and level rollout sequence live in [ROADMAP.md](ROADMAP.md). Preserve mechanical hitboxes, controls and mobile performance.
 
 ## QA
 All 16 levels need manual desktop/mobile verification, including intro, transitions, audio, controls, combat, exit, game-over, and the Level 3–4–5 sequence. Current syntax/hash checks are not gameplay QA.
