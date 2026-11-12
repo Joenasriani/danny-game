@@ -44,5 +44,9 @@ Deployment source: **Deploy from a branch → main → / (root)** (selected by r
 
 **Phase 01 Task 1 COMPLETE (2026-11-12):** Native Pages deployment succeeded on commit `92a1dcb94b6bd97138b6014c32a801baa83c293c` (GitHub Actions run `43211005975`); independent live request returned HTTP 200 and confirmed Danny title/subtitle and intro interface. This verifies deployment and page availability, **not** that full gameplay is playable on all devices. Phase 01 Task 2 manual gameplay QA remains open.
 
+## Phase 01 gameplay QA status
+**Task 1:** COMPLETE – GitHub Pages deployed and a live HTTP 200 intro response verified.
+**Task 2:** OPEN – manual/interactive desktop and mobile gameplay remains unverified; see [QA register](docs/QA_PHASE01.md). Do not advance to character creation until its acceptance gate passes.
+
 ## Verification
 Run `python3 tools/validate_danny.py` (Python 3 and Node.js). Automated checks validate hashes and syntax, **not** real browser playthrough. Full mobile/desktop QA remains open.

@@ -36,5 +36,8 @@ The repository owner selected **Deploy from a branch → main → / (root)** on 
 
 **Task 1 status: COMPLETE / RECHECKED (2026-11-12).** Native GitHub Pages build-and-deployment run `43211005975` succeeded for commit `92a1dcb94b6bd97138b6014c32a801baa83c293c`, and a fresh independent live fetch of https://joenasriani.github.io/danny-game/ returned HTTP 200, HTML content and Danny's title/subtitle. Danny's source release validator also passed for that commit. This verifies independent publication only – not runtime gameplay. **Next: Task 2 manual desktop/mobile gameplay QA.** Never modify original Stickman.
 
+## Phase 01 – Task 2: Gameplay QA checkpoint
+[QA_PHASE01.md](QA_PHASE01.md) is the authoritative pass/pending matrix. Game source validation and live HTML delivery are confirmed. **Interactive browser attempts timed out twice** and yielded no reliable control/level results; all 16-level playthrough, mobile touch, audio and rendering tests remain **NOT VERIFIED**. Follow founder's task-by-task rule: stop before Task 3 until Task 2 has real evidence and is rechecked.
+
 ## Release readiness
 Run the read-only GitHub validation workflow after the completed import. GitHub Pages branch-source configuration was selected by the owner, but live publishing and accessibility remain unverified until checked. Real desktop and mobile gameplay testing remain NOT VERIFIED.

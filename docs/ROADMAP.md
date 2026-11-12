@@ -2,7 +2,7 @@
 
 **Status:** FROZEN / FOUNDER-APPROVED EXECUTION BASELINE as of 2026-11-12. Planning document, not a claim of completed production.
 **Change control:** Follow Phase 01 → Phase 02 → Phase 03, in order. No skipping or modifying phase scopes, deliverables, sequence, locks, or acceptance gates without explicit founder approval documented in this repository. A freeze is not authorization to implement unapproved design specifics.
-**Current execution:** Phase 01, work package 2 (manual desktop/mobile gameplay QA), **OPEN**. Work package 1 is **COMPLETE / RECHECKED**: source integrity CI passed, native branch Pages deployment succeeded, and the live URL returned HTTP 200 with Danny branding. Page delivery is not gameplay testing. Do not advance to work package 3 until QA evidence and any blockers are checked. Other Phase 01 packages and gates remain open until evidenced.
+**Current execution:** Phase 01, work package 2 (manual desktop/mobile gameplay QA), **OPEN / BLOCKED ON INTERACTIVE TEST EVIDENCE**. See [QA_PHASE01.md](QA_PHASE01.md). Live page delivery and source validator pass; two interactive-browser QA attempts timed out, so gameplay remains NOT VERIFIED. Work package 1 is **COMPLETE / RECHECKED**: source integrity CI passed, native branch Pages deployment succeeded, and the live URL returned HTTP 200 with Danny branding. Page delivery is not gameplay testing. Do not advance to work package 3 until QA evidence and any blockers are checked. Other Phase 01 packages and gates remain open until evidenced.
 **Title:** Danny
 **Subtitle:** The man who Sword the world!
 **Source of creative authority:** [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md)
