@@ -27,7 +27,7 @@ try{
           audioUnlocked:audio.unlocked,attackTimer, onGround
         }),
         warp:(index)=>{currentLevelIndex=index;loadCurrentLevel(false);return currentLevelIndex},
-        triggerExit:()=>{const exit=LEVELS[currentLevelIndex].exit;playerGroup.position.set(exit.x,exit.y,0);checkDoors();},
+        triggerExit:()=>{const exit=doors.find(d=>d.isExit);if(!exit)throw Error('No instantiated exit door');playerGroup.position.set(exit.x,exit.y,0);checkDoors();},
         restart:()=>restartGame()
       };
    `;
