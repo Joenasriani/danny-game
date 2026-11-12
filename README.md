@@ -28,6 +28,7 @@ Danny is **not a GitHub fork**. Its history begins here. Original Stickman repos
 - **Commit rule:** implementation, README, manifest, handoff and relevant QA records must remain synchronized in the same commit; reverify the resulting HEAD. Do not claim untested features are live.
 
 ## Three-phase production roadmap
+**FROZEN / APPROVED 2026-11-12.** Follow the phases sequentially; alter scope or advance gates only with explicit founder approval. **Current phase: 01, baseline and independent deployment verification.**
 See [the authoritative three-phase roadmap](docs/ROADMAP.md):
 1. **The Birth of Danny** – independent playable baseline, desktop/mobile QA, boy character bible and style approval (**in progress**).
 2. **The Living Sketch** – a cinematic, expressive, playable one-level vertical slice on an isolated branch (**not started**).

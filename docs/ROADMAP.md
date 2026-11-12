@@ -1,6 +1,8 @@
 # Danny – THREE-PHASE PRODUCTION ROADMAP
 
-**Status:** Founder-requested three-phase implementation roadmap, 2026-11-12. Planning document, not a claim of completed production.
+**Status:** FROZEN / FOUNDER-APPROVED EXECUTION BASELINE as of 2026-11-12. Planning document, not a claim of completed production.
+**Change control:** Follow Phase 01 → Phase 02 → Phase 03, in order. No skipping or modifying phase scopes, deliverables, sequence, locks, or acceptance gates without explicit founder approval documented in this repository. A freeze is not authorization to implement unapproved design specifics.
+**Current execution:** Phase 01, work package 1 (independent technical baseline and deployment verification); other Phase 01 packages and gates remain open until evidenced.
 **Title:** Danny
 **Subtitle:** The man who Sword the world!
 **Source of creative authority:** [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md)

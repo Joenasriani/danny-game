@@ -13,6 +13,9 @@ Read [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md) **before any Danny
 ## Active three-phase execution plan
 The authoritative implementation phases are in [ROADMAP.md](ROADMAP.md): **Phase 01 – The Birth of Danny (in progress); Phase 02 – The Living Sketch (not started); Phase 03 – The World of Danny (not started)**. The roadmap maps all previously locked steps and gates without changing [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md). Start with Danny-only deployment and desktop/mobile baseline QA and character bible; do not jump to all-level visual rollout.
 
+## Founder-approved roadmap freeze (2026-11-12)
+[ROADMAP.md](ROADMAP.md) is **FROZEN** as Danny's current three-phase execution baseline: Phase 01 → Phase 02 → Phase 03, with explicit founder approval required for changes or advancing through gates. Current next work is Phase 01 technical baseline and Danny-only deployment verification, then desktop/mobile QA and character-bible review. Do not interpret a frozen roadmap as completed gameplay/visuals.
+
 ## Initial changes
 Only browser title and intro branding were updated. Gameplay level list 1–16, new Level 4, enemies, physics, touch controls, camera gestures, and assets stay identical to Stickman source.
 
