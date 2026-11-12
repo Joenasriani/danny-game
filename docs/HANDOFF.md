@@ -31,5 +31,8 @@ All 16 levels need manual desktop/mobile verification, including intro, transiti
 ## Asset transfer
 All six original assets were successfully copied. The large music file was retrieved by a one-time GitHub Action pinned to the exact Stickman source commit, verified using SHA-256, and committed to Danny. That bootstrap workflow removed itself. The Git blob SHA of every asset now matches its Stickman source.
 
+## Phase 01 – Task 1: Independent live preview setup
+A standalone Danny-only GitHub Pages workflow was added; it validates the game and uploads its own static assets. **A workflow file is not evidence of successful deployment**. Check GitHub Pages settings, the latest deployment job, and the actual URL before marking Task 1 completed. Do not deploy to Stickman's Pages or itch.io. Phase 01 Task 2 real desktop/mobile gameplay remains open.
+
 ## Release readiness
-Run the read-only GitHub validation workflow after the completed import. GitHub Pages and public live game deployment have not been configured. Real desktop and mobile gameplay testing remain NOT VERIFIED.
+Run the read-only GitHub validation workflow after the completed import. GitHub Pages workflow has been configured in the repository, but successful Pages publication and live accessibility remain unverified until deployment independently succeeds. Real desktop and mobile gameplay testing remain NOT VERIFIED.

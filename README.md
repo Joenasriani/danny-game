@@ -39,5 +39,8 @@ No visual character redesign has been implemented; phase gates require founder r
 ## Asset transfer
 All six runtime assets were copied and their Git blob checksums matched the source repository; the one-time transfer workflow was retired automatically.
 
+## Independent live preview
+The Danny-only GitHub Pages deployment workflow is in [.github/workflows/deploy-danny-pages.yml](.github/workflows/deploy-danny-pages.yml). The expected URL is `https://joenasriani.github.io/danny-game/`, **but do not treat it as live until the deployment action succeeds and the page is checked**. If Pages is disabled, a repository administrator must configure **Settings → Pages → Build and deployment → GitHub Actions**. This does not touch Stickman's deployment.
+
 ## Verification
 Run `python3 tools/validate_danny.py` (Python 3 and Node.js). Automated checks validate hashes and syntax, **not** real browser playthrough. Full mobile/desktop QA remains open.
