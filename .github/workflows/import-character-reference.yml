@@ -1,0 +1,33 @@
+name: Import approved Danny character sheet (one time)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-character-reference.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-canonical-art:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download exact approved image and verify SHA256
+        env:
+          ART_URL: 'https://d2ol7oe51mr4n9.cloudfront.net/user_2wnWe8vh0WbTbvjc0ifeu2164nc/653110e6-4271-4757-9282-306d1b45908b.png'
+        run: |
+          set -euo pipefail
+          mkdir -p docs/character/reference
+          curl --fail --location --retry 3 --silent --show-error "$ART_URL" -o docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png
+          echo 'e4adce3822c367516ae2c5d6ca3d03b426e67feace021be5f8c92eda83735fe2  docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png' | sha256sum --check
+          file docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png
+      - name: Commit frozen source image and retire one-time workflow
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png
+          git rm .github/workflows/import-character-reference.yml
+          git commit -m 'art: preserve approved Danny character reference PNG [skip ci]'
+          git push origin HEAD:main
