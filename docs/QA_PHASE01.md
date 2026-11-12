@@ -31,7 +31,7 @@
 
 ## Automated real-browser smoke test (pending evidence)
 
-A desktop/mobile-emulation Playwright smoke script is provided at `tools/qa_browser.mjs` and the on-demand/browser-change workflow `.github/workflows/qa-browser.yml`. It loads the **published** GitHub Pages URL in headless Chromium and tests title, WebGL canvas sizing, intro-to-level transition, HUD, representative keyboard controls, touch-button visibility, and uncaught page exceptions at four viewport profiles. **The workflow is not marked passing until its GitHub Actions run succeeds.** Even after passing, emulated mobile is not a real-device check; one-level smoke is not 16-level progression and does not verify audio playback quality.
+A desktop/mobile-emulation Playwright smoke script is provided at `tools/qa_browser.mjs` and the on-demand/browser-change workflow `.github/workflows/qa-browser.yml`. It loads the **published** GitHub Pages URL in headless Chromium and tests title, WebGL canvas sizing, intro-to-level transition, HUD, representative keyboard controls, touch-button visibility, and uncaught page exceptions at four viewport profiles. **First attempted run failed before browser launch because ubuntu-latest resolved to Ubuntu 26.04, unsupported by Playwright 1.56.1; pinned ubuntu-24.04 for compatible headless Chromium. This was a test-environment issue, not evidence of a game defect. The workflow is not marked passing until a corrected GitHub Actions run succeeds.** Even after passing, emulated mobile is not a real-device check; one-level smoke is not 16-level progression and does not verify audio playback quality.
 
 ## Phase gate
 
