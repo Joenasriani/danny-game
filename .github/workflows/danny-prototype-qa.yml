@@ -1,0 +1,23 @@
+name: Danny Living Sketch prototype QA
+on:
+  push:
+    branches: [feature/danny-living-sketch-level1]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-integrity:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify original imported game and canonical image
+        run: |
+          python3 tools/validate_danny.py
+          echo 'e4adce3822c367516ae2c5d6ca3d03b426e67feace021be5f8c92eda83735fe2  docs/character/reference/DANNY_CANONICAL_CHARACTER_SHEET.png' | sha256sum --check
+      - name: Syntax and puppet rig construction invariants
+        run: |
+          node --check preview/danny/danny-art.js
+          node tools/check_danny_puppet.cjs

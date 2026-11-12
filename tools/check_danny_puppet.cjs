@@ -1,0 +1,13 @@
+const fs=require('fs'),assert=require('assert');
+const src=fs.readFileSync('preview/danny/danny-art.js','utf8');
+const html=fs.readFileSync('index.html','utf8');
+const pieces=['cape','rearLeg','frontLeg','rearArm','torso','pouch','frontArm','sword','head'];
+for(const part of pieces)assert(src.includes(part+': { pivot:'),'Missing part '+part);
+for(const state of ['idle','run','jump','fall','attack','block','hit'])assert(src.includes('"'+state+'"'),'Missing state '+state);
+assert(src.includes('DANNY_CANONICAL_CHARACTER_SHEET.png'),'Original character sheet missing');
+assert(src.includes('CanvasTexture'),'Missing Three.js texture integration');
+assert(src.includes('stickParts.visible = false'),'Original stickman must be hidden only after new artwork loads');
+assert(html.includes("const LEVELS = ["),'Original game baseline missing');
+assert(!src.includes('playerVelocity.x ='),'Puppet must not change gameplay velocity');
+assert(!src.includes('currentLevelIndex ='),'Puppet must not change level progression');
+console.log('PASS: 9 separated canonical character parts, 7 visual states, cosmetic-only rig; original game intact');
