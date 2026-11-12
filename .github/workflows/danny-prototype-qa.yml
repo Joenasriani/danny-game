@@ -45,3 +45,26 @@ jobs:
           name: danny-six-real-animated-states
           path: qa-output/danny-states/
           retention-days: 30
+  playable-level01:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Serve prototype branch locally
+        run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/danny-http.log 2>&1 &
+      - name: Verify playable Level 1 with exact approved image and real canvas rendering
+        run: node tools/qa_danny_playable.mjs
+      - name: Retain real game screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: danny-playable-level01-screenshots
+          path: qa-output/playable/
+          retention-days: 30
