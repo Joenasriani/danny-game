@@ -4,6 +4,12 @@
 
 **Capture method:** Headless Chromium/Playwright, GitHub Actions on Ubuntu 24.04, fresh load of the deployed game. Screenshots represent the **existing original game** before the Living Sketch redesign; they are not mockups or final Danny character designs. Portrait/landscape/tablet images are **emulated viewports**, not photographs of physical devices. The Level 4 and 16 views used test-only level selection in the isolated browser. These images do not prove normal platform traversal, audio, FPS, visual quality approval or completion of 16 levels.
 
+## Level 1 – actual game input playthrough (Chromium)
+
+![Danny Level 1 keyboard-controlled traversal into Level 2](level01-real-input-run.gif)
+
+The recorded run uses real ArrowRight and ArrowUp browser inputs against the deployed game, without player teleportation or gameplay-source edits. **It completed only Level 1** and reached Level 2; this is a computer-controlled test, **not** a human or physical-device playthrough. See [the GitHub Actions test and state trace](https://github.com/Joenasriani/danny-game/actions/runs/43228950032).
+
 ## Desktop – 1440 × 900
 ![Danny desktop opening](desktop-intro.png)
 
