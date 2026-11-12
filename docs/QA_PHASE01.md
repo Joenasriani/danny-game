@@ -36,6 +36,10 @@ A desktop/mobile-emulation Playwright smoke script is provided at `tools/qa_brow
 ## First Chromium QA results (2026-11-12)
 The first supported Ubuntu 24.04 browser run reached actual Chromium, loaded the live page, rendered a canvas, dismissed the intro, displayed HUD, and exercised keyboard/touch smoke on desktop, emulated mobile portrait/landscape and tablet – **all without uncaught page exceptions**. The run reported a false negative for `levelOne` only: it checked `body.innerText` after the 950-ms level banner was hidden, so the hidden banner was correctly excluded. Corrected the test to inspect the banner's persistent `textContent`. Pending a clean rerun; full level completion and physical hardware are still unverified. See GitHub Actions run `43216138794`.
 
+## 16-level runtime and transition test (pending evidence)
+
+`tools/qa_level_runtime.mjs` is a test-only **live Chromium** check which loads the real published game, temporarily instruments the HTML response in its isolated test browser (without editing GitHub Pages or `index.html`), and verifies that each of 16 levels can be constructed with an exit, the expected number of enemies, safe initialization, input responses, direct-manipulation camera sign, and scripted transition logic (Levels 3→4→5, final victory). Scripted warps/exit teleports **are not actual platform traversal or proof of jump reachability**. Headless results must be checked from GitHub Actions before recording passes.
+
 ## Phase gate
 
 **Task 2 cannot be marked COMPLETE until the interactive matrix is evidenced.** Successful source validation, an HTML page response, or timed-out browser automation are not equivalent to gameplay verification. The owner may supply actual-device test reports; a capable interactive browser environment may independently perform the checks. Do not begin Task 3 or later phases until Task 2 is rechecked and completed, per founder's sequential execution instruction.

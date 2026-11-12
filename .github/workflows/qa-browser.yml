@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'tools/qa_browser.mjs'
+      - 'tools/qa_level_runtime.mjs'
       - '.github/workflows/qa-browser.yml'
       - 'index.html'
   workflow_dispatch:
@@ -24,3 +25,5 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Test published Danny build
         run: node tools/qa_browser.mjs
+      - name: Test all 16 level loaders and controlled transitions
+        run: node tools/qa_level_runtime.mjs
