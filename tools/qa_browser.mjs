@@ -37,7 +37,7 @@ try {
       await page.locator('#startButton').click({ timeout: 15000 });
       await page.waitForTimeout(2400);
       result.checks.introDismissed = await page.locator('#intro').isHidden();
-      result.checks.levelOne = (await page.locator('body').innerText()).includes('LEVEL 1');
+      result.checks.levelOne = (await page.locator('#levelBanner').textContent() || '').includes('Level 1');
       result.checks.hud = (await page.locator('#hpDisplay').innerText()).startsWith('HP:');
       if (config.touch) {
         const btns = page.locator('.touchBtn[data-key]');
