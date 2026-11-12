@@ -649,7 +649,7 @@ html, body {
  <button type="button" data-dannymotion="attack">SWORD</button>
  <button type="button" data-dannymotion="block">BLOCK</button>
  <button type="button" data-dannymotion="hit">DAMAGE</button>
- <button type="button" id="dannyFocusToggle">ZOOM DANNY</button>
+ <button type="button" id="dannyFocusToggle">WIDE VIEW</button>
  </div><small id="dannyProtoNote">Pose preview only · original gameplay remains authoritative</small>
  </details></div>
 <script>
@@ -751,7 +751,8 @@ document.querySelectorAll('[data-dannymotion]').forEach(b=>b.addEventListener('c
       }
 
       function getDefaultCameraDistance() {
-        return getCameraProfile().defaultDistance;
+        // Level-1 cinematic inspection framing; camera gestures and physics unchanged.
+        return isPortraitViewport() ? 18 : 9;
       }
 
       let fpsFrames = 0, fpsTime = 0, currentFPS = 60, lowPerfMode = false;
@@ -3295,7 +3296,7 @@ document.querySelectorAll('[data-dannymotion]').forEach(b=>b.addEventListener('c
       window.DannyPreviewFocus = () => {
         const closeDistance = isPortraitViewport() ? 18 : 9;
         const atClose = Math.abs(orbit.distance - closeDistance) < 1.2;
-        orbit.distance = clampCameraDistance(atClose ? getDefaultCameraDistance() : closeDistance);
+        orbit.distance = clampCameraDistance(atClose ? getCameraProfile().defaultDistance : closeDistance);
         return { distance: orbit.distance, close: !atClose };
       };
       function animate() {

@@ -22,7 +22,7 @@ try {
 window.__DANNY_LIVE_CHECK = ()=>({
  loaded:dannyPuppet.loaded,failed:dannyPuppet.failed,origVisible:stickParts.visible,
  levelCount:LEVELS.length,state:playerState,hitpoints:hp,px:playerGroup.position.x,
- textureWidth:dannyPuppet.mesh.material.map.image.width
+ textureWidth:dannyPuppet.mesh.material.map.image.width,distance:orbit.distance
 });
 `;
    await route.fulfill({response:r,body:html.replace(marker,bridge+marker),headers:{...r.headers(),'cache-control':'no-store'}});
@@ -51,6 +51,19 @@ window.__DANNY_LIVE_CHECK = ()=>({
     await page.keyboard.down('ArrowRight');await page.waitForTimeout(260);await page.keyboard.up('ArrowRight');
    }
    row.checks.inputWorks=(await page.evaluate(()=>window.__DANNY_LIVE_CHECK())).px>x+0.01;
+   // Assert closer-than-original default framing and working wide/close toggle.
+   const near=(await page.evaluate(()=>window.__DANNY_LIVE_CHECK())).distance;
+   row.checks.closeupDefault=near<=18.2;
+   await page.locator('#dannyPrototypeLabel summary').click();
+   const focusButton=page.locator('#dannyFocusToggle');
+   row.checks.focusToggleExists=await focusButton.isVisible();
+   await focusButton.click();
+   const wide=(await page.evaluate(()=>window.__DANNY_LIVE_CHECK())).distance;
+   row.checks.wideCameraWorks=wide>near+1.5;
+   await focusButton.click();
+   const restored=(await page.evaluate(()=>window.__DANNY_LIVE_CHECK())).distance;
+   row.checks.restoreCloseup=Math.abs(restored-near)<1.2;
+   await page.locator('#dannyPrototypeLabel summary').click();
    row.checks.noPageError=errors.length===0;
    await page.screenshot({path:'qa-output/danny-live/'+p.name+'.png'});
   } catch(e){row.exception=String(e).slice(0,550);}
