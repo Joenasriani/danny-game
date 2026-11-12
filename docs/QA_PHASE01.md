@@ -43,6 +43,17 @@ The first supported Ubuntu 24.04 browser run reached actual Chromium, loaded the
 ## First all-level Chromium run (2026-11-12)
 Headless Chromium actually constructed **all 16 levels**, and every level passed six runtime checks: correct index/name, one exit door, platform geometry, exactly N enemies on Level N, and no premature game-over. ArrowRight movement, jump, combat safety, camera drag sign and scripted 3→4→5 transitions also passed with zero page exceptions. The only reported failure was `finalVictory` because the test teleported to the level's *nominal exit metadata*, whereas generated premium levels place their authoritative physical exit using `createDoor` (its y may differ). The test now targets the **instantiated exit door** instead of the descriptive metadata; pending rerun. These are controlled runtime tests, not natural level traversal. See run `43216896316`.
 
+## Verified Chromium evidence (2026-11-12, current automated baseline)
+
+**GitHub Actions run:** https://github.com/Joenasriani/danny-game/actions/runs/43217241904 (PASS for source `387c06ce3c99c2cb8440a174929dbe7a5ee03d72`). The workflow ran against the actual public Pages URL and its two browser jobs passed:
+
+- **Published-game smoke:** Chromium loaded Danny's intro and 3D canvas with no page exceptions at desktop (1440×900), emulated mobile portrait (390×844), emulated mobile landscape (844×390), and emulated tablet (768×1024). Start button dismissed intro; HUD and touch controls were present; desktop keyboard inputs exercised.
+- **Live 16-level runtime:** Separately, real Chromium constructed all sixteen levels in an isolated test browser with temporary test-only instrumentation (the deployed game was NOT modified). Every level had the correct index/name, an exit door, nonzero platform geometry, the exact expected enemy count (Level N → N enemies), and no premature game-over.
+- **Controls and transitions in test browser:** ArrowRight moved the player, ArrowUp produced a jump, attacking produced no uncaught error, camera dragging applied the locked world-grab yaw/pitch direction, scripted exits advanced Levels 3→4→5, and the final exit triggered the victory state.
+- **Source and publishing:** the read-only validation workflow and GitHub Pages branch deployment also passed for the source test commit.
+
+**Explicit coverage boundary:** All-level runtime construction and **scripted exit teleports** are not natural playthroughs. Emulated touch viewports are not physical-device tests. Audio audibility, sustained gameplay performance, platform reachability, combat fairness, all gesture types and completion of every level by normal input are NOT VERIFIED. These remain Phase 01 Task 2 acceptance checks.
+
 ## Phase gate
 
 **Task 2 cannot be marked COMPLETE until the interactive matrix is evidenced.** Successful source validation, an HTML page response, or timed-out browser automation are not equivalent to gameplay verification. The owner may supply actual-device test reports; a capable interactive browser environment may independently perform the checks. Do not begin Task 3 or later phases until Task 2 is rechecked and completed, per founder's sequential execution instruction.

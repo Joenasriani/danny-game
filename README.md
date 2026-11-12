@@ -46,7 +46,7 @@ Deployment source: **Deploy from a branch → main → / (root)** (selected by r
 
 ## Phase 01 gameplay QA status
 **Task 1:** COMPLETE – GitHub Pages deployed and a live HTTP 200 intro response verified.
-**Task 2:** OPEN – manual/interactive desktop and mobile gameplay remains unverified; see [QA register](docs/QA_PHASE01.md). Do not advance to character creation until its acceptance gate passes.
+**Task 2:** PARTIALLY VERIFIED / OPEN – live Chromium smoke passed on desktop and emulated mobile/tablet, and scripted all-16-level runtime/transition checks passed (Actions run `43217241904`). **Real-device QA and a natural complete playthrough remain unverified**; see [QA register](docs/QA_PHASE01.md). Do not advance to character creation until its acceptance gate passes.
 
 ## Verification
 Run `python3 tools/validate_danny.py` (Python 3 and Node.js). Automated checks validate hashes and syntax, **not** real browser playthrough. Full mobile/desktop QA remains open.
