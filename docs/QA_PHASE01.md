@@ -29,6 +29,10 @@
 - [ ] Audio: music/sound effects, autoplay gating, mute and failures
 - [ ] Capture browser/device, viewport, timestamp, tested level, expected result, actual result, reproduction steps for defects
 
+## Automated real-browser smoke test (pending evidence)
+
+A desktop/mobile-emulation Playwright smoke script is provided at `tools/qa_browser.mjs` and the on-demand/browser-change workflow `.github/workflows/qa-browser.yml`. It loads the **published** GitHub Pages URL in headless Chromium and tests title, WebGL canvas sizing, intro-to-level transition, HUD, representative keyboard controls, touch-button visibility, and uncaught page exceptions at four viewport profiles. **The workflow is not marked passing until its GitHub Actions run succeeds.** Even after passing, emulated mobile is not a real-device check; one-level smoke is not 16-level progression and does not verify audio playback quality.
+
 ## Phase gate
 
 **Task 2 cannot be marked COMPLETE until the interactive matrix is evidenced.** Successful source validation, an HTML page response, or timed-out browser automation are not equivalent to gameplay verification. The owner may supply actual-device test reports; a capable interactive browser environment may independently perform the checks. Do not begin Task 3 or later phases until Task 2 is rechecked and completed, per founder's sequential execution instruction.
