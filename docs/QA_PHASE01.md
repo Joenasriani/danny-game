@@ -58,6 +58,10 @@ Headless Chromium actually constructed **all 16 levels**, and every level passed
 
 See [Visual review instructions](VISUAL_REVIEW.md) and, after capture completes, [screenshots of the actual deployed game](visual-evidence/README.md). Screenshot QA addresses layout and visual communication, not full 16-level playability. **Actual-game capture succeeded** in GitHub Actions run `43218599518` and auto-committed the gallery at `66fb49003b89090d2f44569b9ab856bcba85e682` (7 PNG captures: desktop intro, desktop Levels 1/4/16, emulated portrait, emulated landscape and emulated tablet Level 1). Images are now available for founder inspection; **visual approval has not been granted**. Full natural gameplay and real-device checks remain OPEN.
 
+## Input-driven traversal probe – experimental (pending evidence)
+
+A separate [Level 1 Chromium input-driven probe](../tools/qa_level01_play.mjs) exercises real ArrowRight and ArrowUp browser inputs against the live Danny game, with limited read-only state instrumentation and a recorded video/screenshot artifact. It uses three targeted jump timing strategies and reports actual level progression. This **cannot substitute for full human playthrough, all sixteen levels or physical-device testing**. Do not record a pass unless the separate GitHub Actions run succeeds and the input trace supports the result. The experiment never modifies the published game source.
+
 ## Phase gate
 
 **Task 2 cannot be marked COMPLETE until the interactive matrix is evidenced.** Successful source validation, an HTML page response, or timed-out browser automation are not equivalent to gameplay verification. The owner may supply actual-device test reports; a capable interactive browser environment may independently perform the checks. Do not begin Task 3 or later phases until Task 2 is rechecked and completed, per founder's sequential execution instruction.

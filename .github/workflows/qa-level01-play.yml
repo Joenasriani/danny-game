@@ -1,0 +1,32 @@
+name: Danny Level 1 input-driven gameplay probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/qa_level01_play.mjs'
+      - '.github/workflows/qa-level01-play.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  play:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test browser
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Attempt Level 1 using normal movement and jump inputs
+        run: node tools/qa_level01_play.mjs
+      - name: Retain visual evidence, video and state trace
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: danny-level01-actual-input-probe
+          path: qa-output
+          retention-days: 30
