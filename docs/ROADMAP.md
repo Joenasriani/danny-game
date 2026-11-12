@@ -2,7 +2,7 @@
 
 **Status:** FROZEN / FOUNDER-APPROVED EXECUTION BASELINE as of 2026-11-12. Planning document, not a claim of completed production.
 **Change control:** Follow Phase 01 → Phase 02 → Phase 03, in order. No skipping or modifying phase scopes, deliverables, sequence, locks, or acceptance gates without explicit founder approval documented in this repository. A freeze is not authorization to implement unapproved design specifics.
-**Current execution:** Phase 01, work package 1 (independent technical baseline and deployment verification); other Phase 01 packages and gates remain open until evidenced.
+**Current execution:** Phase 01, work package 1 (independent technical baseline and deployment verification), **BLOCKED on manual GitHub Pages enablement**. Static integrity CI passes, but GitHub Actions lacks permission to create the Pages site. Repository owner must set Settings → Pages → Build and deployment → GitHub Actions, then the workflow must run successfully and the actual URL must be checked. **Do not advance to work package 2 until Task 1 is completed and independently rechecked.** Other Phase 01 packages and gates remain open until evidenced.
 **Title:** Danny
 **Subtitle:** The man who Sword the world!
 **Source of creative authority:** [CREATIVE_DIRECTION_LOCK.md](CREATIVE_DIRECTION_LOCK.md)
@@ -88,7 +88,7 @@ This three-phase structure maps the six previously approved implementation steps
 
 ## Progress at adoption (2026-11-12)
 
-- **Phase 01:** In progress – independent 16-level repository import and asset transfer complete; character bible, independent deployment and actual device QA remain open.
+- **Phase 01:** In progress – independent 16-level repository import and asset transfer complete; **Task 1 BLOCKED** on manual Pages source configuration; character bible and actual device QA remain open.
 - **Phase 02:** Not started.
 - **Phase 03:** Not started.
 - **Game code changes from this document commit:** None.

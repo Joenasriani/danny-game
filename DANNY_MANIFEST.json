@@ -44,7 +44,7 @@
     "js_syntax": "Passed locally on exact Danny-branded source; GitHub CI recheck pending",
     "browser_gameplay": "NOT VERIFIED",
     "mobile": "NOT VERIFIED",
-    "deployment": "Phase 01 Task 1: source validation PASS; initial Pages attempt failed (Pages site disabled / Not Found). Auto-enablement retry configured; deployment and URL remain NOT VERIFIED"
+    "deployment": "BLOCKED / NOT DEPLOYED: CI release validator PASS; Pages workflow fails because GitHub App token lacks permission to create Pages site. Owner must enable Pages in repo Settings > Pages > Build and deployment > GitHub Actions, then rerun and verify public URL."
   },
   "protected_source_repo": "https://github.com/Joenasriani/stickman",
   "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman.",
