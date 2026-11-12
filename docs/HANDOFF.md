@@ -34,7 +34,7 @@ All six original assets were successfully copied. The large music file was retri
 ## Phase 01 – Task 1: Independent GitHub Pages baseline
 The repository owner selected **Deploy from a branch → main → / (root)** on 2026-11-12. The obsolete, failed custom GitHub Actions Pages workflow was removed to avoid competing deployment paths; the `Verify Danny (read only)` workflow remains. Expected URL: https://joenasriani.github.io/danny-game/ .
 
-**Task 1 status: pending live publication and independent URL/content verification.** GitHub Actions source validation is not evidence of live publishing or device gameplay. Check that the published page contains Danny's title, 16-level build and required runtime assets. Do not modify the original Stickman site or advance to Task 2 until this checkpoint passes.
+**Task 1 status: COMPLETE / RECHECKED (2026-11-12).** Native GitHub Pages build-and-deployment run `43211005975` succeeded for commit `92a1dcb94b6bd97138b6014c32a801baa83c293c`, and a fresh independent live fetch of https://joenasriani.github.io/danny-game/ returned HTTP 200, HTML content and Danny's title/subtitle. Danny's source release validator also passed for that commit. This verifies independent publication only – not runtime gameplay. **Next: Task 2 manual desktop/mobile gameplay QA.** Never modify original Stickman.
 
 ## Release readiness
 Run the read-only GitHub validation workflow after the completed import. GitHub Pages branch-source configuration was selected by the owner, but live publishing and accessibility remain unverified until checked. Real desktop and mobile gameplay testing remain NOT VERIFIED.

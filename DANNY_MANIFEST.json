@@ -42,9 +42,9 @@
     "html_and_five_assets": "All six original asset Git blob hashes matched at repository import; Danny-branded index SHA checked",
     "music": "Transferred via pinned-source one-time workflow; Git blob matches original",
     "js_syntax": "Verified by GitHub Actions Verify Danny (read only) for source baseline; automated JS syntax is not gameplay testing.",
-    "browser_gameplay": "NOT VERIFIED",
-    "mobile": "NOT VERIFIED",
-    "deployment": "PENDING LIVE CHECK: owner selected GitHub Pages branch deployment main / (root); obsolete failed custom Pages Actions workflow removed; published URL/content and real gameplay NOT VERIFIED"
+    "browser_gameplay": "NOT VERIFIED: Phase 01 Task 2 manual full 16-level desktop gameplay QA pending",
+    "mobile": "NOT VERIFIED: Phase 01 Task 2 manual mobile portrait/landscape QA pending",
+    "deployment": "COMPLETE: GitHub Pages native branch build passed for commit 92a1dcb94b6bd97138b6014c32a801baa83c293c (run 43211005975), live URL HTTP 200 with Danny title/subtitle verified 2026-11-12. This is not manual gameplay QA."
   },
   "protected_source_repo": "https://github.com/Joenasriani/stickman",
   "release_policy": "Danny is independent. All rendering/character/game changes stay in Danny; never push to Stickman.",

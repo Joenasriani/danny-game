@@ -42,7 +42,7 @@ All six runtime assets were copied and their Git blob checksums matched the sour
 ## Independent GitHub Pages preview
 Deployment source: **Deploy from a branch → main → / (root)** (selected by repository owner on 2026-11-12). GitHub Pages should publish at https://joenasriani.github.io/danny-game/ . The previous custom GitHub Actions Pages workflow was removed after it failed to create the Pages site due to a permissions limitation; the independent `Verify Danny (read only)` validation workflow remains active.
 
-**Phase 01 Task 1 deployment verification is pending:** do not claim the live site is accessible, correct or playable until independently checked. Manual desktop/mobile gameplay QA is a separate Phase 01 task.
+**Phase 01 Task 1 COMPLETE (2026-11-12):** Native Pages deployment succeeded on commit `92a1dcb94b6bd97138b6014c32a801baa83c293c` (GitHub Actions run `43211005975`); independent live request returned HTTP 200 and confirmed Danny title/subtitle and intro interface. This verifies deployment and page availability, **not** that full gameplay is playable on all devices. Phase 01 Task 2 manual gameplay QA remains open.
 
 ## Verification
 Run `python3 tools/validate_danny.py` (Python 3 and Node.js). Automated checks validate hashes and syntax, **not** real browser playthrough. Full mobile/desktop QA remains open.
