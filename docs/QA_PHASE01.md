@@ -70,6 +70,9 @@ A separate [Level 1 Chromium input-driven probe](../tools/qa_level01_play.mjs) e
 - **Observed checkpoints:** first jump at x≈−3.04, grounded x≈3.39 after first jump, then reached Level 2 after second jump. The probe is a **computer-controlled playthrough of Level 1 only**. It is NOT a human desktop playthrough, a physical mobile-device test, a Level 4 reachability verification, an entire 16-level playthrough, a sound quality assessment, or creative approval.
 - **Next gate:** Natural progression of remaining levels and physical-device touch/audio still OPEN. Retain Phase 01 Task 2 as **PARTIAL** and do not advance to the character-construction task.
 
+## Animated review encoder correction (2026-11-12)
+The initial optional GIF publication run `43229685375` **passed the actual Level 1 input-driven gameplay probe**, but failed only while generating an animated review preview because the hosted Ubuntu 24.04 runner lacked `ffmpeg`. The workflow now explicitly installs the encoder; the game and original evidence are unchanged. Do not report the GIF as published until the retry and repository tree are independently verified.
+
 ## Phase gate
 
 **Task 2 cannot be marked COMPLETE until the interactive matrix is evidenced.** Successful source validation, an HTML page response, or timed-out browser automation are not equivalent to gameplay verification. The owner may supply actual-device test reports; a capable interactive browser environment may independently perform the checks. Do not begin Task 3 or later phases until Task 2 is rechecked and completed, per founder's sequential execution instruction.
