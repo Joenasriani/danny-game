@@ -7,7 +7,7 @@ on:
       - '.github/workflows/qa-level01-play.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   play:
     runs-on: ubuntu-24.04
@@ -30,3 +30,32 @@ jobs:
           name: danny-level01-actual-input-probe
           path: qa-output
           retention-days: 30
+      - name: Publish lightweight animated Level 1 playthrough proof
+        run: |
+          set -euo pipefail
+          VIDEO="$(find qa-output -maxdepth 1 -name '*.webm' -print -quit)"
+          if [ -z "$VIDEO" ]; then echo "No recorded gameplay video found"; exit 1; fi
+          ffmpeg -hide_banner -loglevel error -y -i "$VIDEO" -vf "fps=6,scale=540:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=64[p];[b][p]paletteuse=dither=bayer:bayer_scale=5" docs/visual-evidence/level01-real-input-run.gif
+          test -s docs/visual-evidence/level01-real-input-run.gif
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('docs/visual-evidence/README.md')
+          src = path.read_text()
+          block = """## Level 1 – actual game input playthrough (Chromium)
+
+          ![Danny Level 1 keyboard-controlled traversal into Level 2](level01-real-input-run.gif)
+
+          The recorded run uses real ArrowRight and ArrowUp browser inputs against the deployed game, without player teleportation or gameplay-source edits. **It completed only Level 1** and reached Level 2; this is a computer-controlled test, **not** a human or physical-device playthrough. See [the GitHub Actions test and state trace](https://github.com/Joenasriani/danny-game/actions/runs/43228950032).
+
+          """
+          if 'level01-real-input-run.gif' not in src:
+              src = src.replace('## Desktop – 1440 × 900', block + '## Desktop – 1440 × 900')
+              path.write_text(src)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual-evidence/level01-real-input-run.gif docs/visual-evidence/README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "qa: publish verified input-driven Level 1 animation [skip ci]"
+            git push origin HEAD:main
+          fi
